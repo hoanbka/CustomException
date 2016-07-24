@@ -1,5 +1,6 @@
 package exceptionHandling_ex5;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -21,7 +22,11 @@ public class Main {
 					System.out.println("OK, these are 3 sides of a triangle");
 					break;
 				}
-			} catch (IllegalTriangleException ex) {
+			} catch (InputMismatchException ex) {
+				System.out.println("Integer is required");
+			}
+
+			catch (IllegalTriangleException ex) {
 				System.out.println("IllegalTriangleException, try again");
 			}
 		}
